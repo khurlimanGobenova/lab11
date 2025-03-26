@@ -77,4 +77,29 @@ public class MyController {
     public String concat(@PathVariable String str1, @PathVariable String str2) {
         return "The concatenation of " + str1 + " and " + str2 + " is " + ( str1 + str2);
     }
+    @GetMapping("/add/{x}/{y}")
+    public String add(@PathVariable int x, @PathVariable int y) {
+        return "The sum of " + x + " and " + y + " is " + (x + y) + ".";
+    }
+    @GetMapping("/multiply/{x}/{y}")
+    public String multiply(@PathVariable int x, @PathVariable int y) {
+        return "The product of " + x + " and " + y + " is " + (x * y) + ".";
+    }
+    @GetMapping("/subtract/{x}/{y}")
+    public String subtract(@PathVariable int x, @PathVariable int y) {
+        return "The difference of " + x + " and " + y + " is " + (x - y);
+    }
+    @GetMapping("/divide/{x}/{y}")
+    public String divide(@PathVariable int x, @PathVariable int y) {
+        return "The division of " + x + " and " + y + " is " + (x / y);
+    }
+    @GetMapping("/modulus/{x}/{y}")
+    public String modulus(@PathVariable int x, @PathVariable int y) {
+        return "The remainder when " + x + " is divided by " + y + " is " + (x % y);
+    }
+    @GetMapping("/modulus/{x}/{y}")
+    public String power(@PathVariable int base, @PathVariable int exp) {
+        return "The power " + exp + " of " + base + " is " + Math.pow(base,exp);
+    }
+
 }
